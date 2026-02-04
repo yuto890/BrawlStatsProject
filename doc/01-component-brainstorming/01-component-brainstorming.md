@@ -1,12 +1,9 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
-
+- **Name**: Yuto Shiwa
+- **Dot Number**: Shiwa.1
+- **Due Date**: 2/6/2026 @12:40
 ## Assignment Overview
-
-<!-- TODO: read the assignment overview then delete this comment -->
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -29,7 +26,6 @@ implement.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -52,7 +48,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
 
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
@@ -67,7 +62,6 @@ project. Specifically, students should be able to:
 
 ## Assignment Rubric: 10 Points
 
-<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -106,15 +100,12 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+My two biggest hobbies are Soccer and Brawl Stars.
+Because there aren't many apps that are directed towards Brawl Stars players in any shape or form, I would love to make one.
+I've always wanted to keep track of my numbers of dps, kills, and deaths in different game modes so I would most likely make a tracker.
 
 ## Assignment
 
-<!-- TODO: read the assignment section then delete this comment -->
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
@@ -122,7 +113,7 @@ that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
 
-<!-- TODO: browse the list of possible projects then delete this comment -->
+
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -143,7 +134,7 @@ about different ways you might allow a client to manipulate your component.
 
 ### Example Component
 
-<!-- TODO: review this example component then delete this comment -->
+
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -211,68 +202,99 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1:  MatchLog
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
-  - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+  - This component represents a single Brawl Stars match manually entered by the player. Its purpose is to store the raw statistics for one match, including kills, deaths, damage, and duration. Kernel methods focus on storing and retrieving this raw data, while secondary methods compute derived statistics such as DPS and kill/death ratio for that match.  - **Kernel Methods**:
+    - 'void setKills(int k)': sets the number of kills
+    - 'void setDeaths(int dth)': sets the number of deaths
+    - 'void setDamage(int dmg)': sets the number of deaths
+    - 'void setDuration(int seconds)': sets the duration of the game
+    - 'int kills()': returns the number of kills the last game
+    - 'int deaths()': returns the number of deaths of the last game
+    - 'int damage()': returns the number of damage the last game
+    - 'int duration()': returns the duration of the game the last game
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
-  - **Additional Considerations** (*note*: "I don't know" is an acceptable
-    answer for each of the following questions):
-    - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
-      Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component need any enums or constants (e.g.,
-      `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Can you implement your secondary methods using your kernel methods?
-      Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+    - 'double dps()': computes damage per second for the game
+    - 'double killDeathRatio()': computes kills/deaths ratio for the game
+    - 'void resetKills()': clears the number of kills for the game
+    - 'void resetDeaths()': clears the number of deaths for the game
+    - 'void resetDamage()':clears the number of damage for the game
+    - 'void resetDuration()':clears the number of duration for the game
+    - 'void reset()':clears all stats for the game
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
-  - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
-  - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
-  - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Since it would require manual entry from the player, the component must be mutable.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I don't think so
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I don't know
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes! dps() can be calculated using damage() and duration(). killDeathRatio() can be calculated using kills() and deaths().
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: GameModeStats
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - Represents statistics for a single game mode. Stores cumulative totals and the last  match's stats and the secondary methods computes averages, ratio, and statistics for both the most recent match and all matches combined.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
-  - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - 'void recordMatch(MatchLog m)': add a match to this mode
+    - 'MatchLog lastMatch()': returns the most recent match
+    - 'int totalKills()': cumulative kills
+    - 'int totalDeaths()': cumulative deaths
+    - 'int totalDamage()': cumulative damage
+    - 'int totalDuration()': cumulative duration
+    - 'int matchCount()': number of matches recorded
+- **Secondary Methods**:
+    - 'double averageDPS()': average DPS across all matches
+    - 'double averageKills()': average kills per duration
+    - 'double killDeathRatio()': cumulative kills/deaths ratio
+    - 'double lastMatchDPS()': DPF of the most recent match
+    - 'double lastMatchKDR()': Kills/deaths ratio of the most recent match
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes because the stats and the number of games must update totals.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Probably yes. It would rely on some sort of a class that does a successful job oh holding keys and value.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I don't know
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes. For example, avergeKills() can be generated by using totalKills() and totalDuration()
+
+- Component Design #3: StatsTracker
+  - **Description**:
+    - This component manages all tracked statistics across multiple game modes. Its kernel stores per-mode stats and the last match recorded, while secondary methods compute global statistics (overall DPS, overall K/D) and provide the most recent match’s stats.
+  - **Kernel Methods**:
+    - 'void addMatch(String mode, MatchLog m)': adds a match to a specific mode
+    - 'GameModeStats modeStats(String mode)': returns stats for the given mode
+    - 'void clear()': clears all tracked data
+    - 'MatchLog lastMatch()': returns the most recent match across all modes
+
+  - **Secondary Methods**:
+    - 'double overallDPS()': cumulative DPS across all modes
+    - 'double overallKillDeathRatio()': cumulative K/D ratio across all modes
+    - 'MatchLog lastMatchStats()': stats from the most recent match across all modes
+    - 'String bestModeByDPS()': game mode with the highest cumulative DPS
+    - 'int totalMatches()': total number of matches recorded
+
+  - **Additional Considerations** (*note*: "I don't know" is an acceptable
+    answer for each of the following questions):
+    - Would this component be mutable? Answer and explain:
+      - Yes, it accumulates matches over time and allows clearing and updating of data.
+    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
+      Answer and explain:
+      - Probably yes.
+    - Would this component need any enums or constants (e.g.,
+      `Program.Instruction`)? Answer and explain:
+      - I don tknow.
+      Answer, explain, and give at least one example:
+      - Yes. For example, overallDPS() can be computed by summing totalDamage() and totalDuration() from each modeStats() instance
 
 ## Post-Assignment
 
@@ -280,8 +302,6 @@ The following sections detail everything that you should do once you've
 completed the assignment.
 
 ### Changelog
-
-<!-- TODO: create CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -320,7 +340,6 @@ of development.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
 
 If you have completed the assignment using this template, we recommend that
 you convert it to a PDF before submission. If you're not sure how, check out
@@ -330,11 +349,9 @@ all your work is there before submitting. For future assignments, you will
 just be submitting a link to a pull request. This will be the only time
 you have to submit any PDFs.
 
-<!-- TODO: upload a PDF of this document and the CHANGELOG to Carmen then delete this comment -->
 
 ### Peer Review
 
-<!-- TODO: review the peer review guidelines then delete this comment -->
 
 Following the completion of this assignment, you will be assigned three
 students' component brainstorming assignments for review. Your job during the
@@ -360,8 +377,6 @@ PDF to read this rubric as a table).
 If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
-
-<!-- TODO: follow the link to share your feedback then delete this comment -->
 
 [example-components]: https://therenegadecoder.com/code/the-never-ending-list-of-small-programming-project-ideas/
 [markdown-to-pdf-guide]: https://therenegadecoder.com/blog/how-to-convert-markdown-to-a-pdf-3-quick-solutions/
