@@ -14,6 +14,13 @@ the following form: YYYY.0M.0D.
 - Designed a GameModeStats
 - Designed a StatsTracker component
 
+## [2026.02.25]
+
+### Added
+- Designed matchLog.java following
+- Added new Branch
+- finished Proof of Concept
+
 
 [unreleased]: https://github.com/jrg94/portfolio-project/compare/v2024.08.07...HEAD
 [2024.08.07]: https://github.com/jrg94/portfolio-project/compare/v2024.01.07...v2024.08.07
