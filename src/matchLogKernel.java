@@ -83,7 +83,7 @@ public interface matchLogKernel extends Standard<MatchLog> {
      * Returns the duration of the match in seconds.
      *
      * @return match duration
-     * @ensures duration = duration of this match
+     * @ensures duratio = duration of this match
      */
     int duration();
 }
